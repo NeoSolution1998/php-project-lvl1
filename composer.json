@@ -1,10 +1,13 @@
 {
     "name": "hexlet/code",
+    "bin": ["bin/brain-games"],
     "authors": [
         {
             "name": "neosolution",
             "email": "neosolution1998@gmail.com"
         }
     ],
+    "description": "hexlet php-package",
+    "license": "MIT",
     "require": {}
 }
