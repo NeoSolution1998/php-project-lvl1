@@ -15,5 +15,10 @@
 	    "files": ["src/Cli.php"]
     },
     "license": "MIT",
-    "require": {"wp-cli/php-cli-tools": "^0.11.13"}
-}
+    "require": {
+	    "wp-cli/php-cli-tools": "^0.11.13"
+    },
+    "require-dev": {
+	 "squizlabs/php_codesniffer": "3.6"    
+    }
+ }
