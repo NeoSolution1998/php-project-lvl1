@@ -21,14 +21,14 @@ function game()
              line('Correct!');
         } else {
             if ($randNum % 2 == 0) {
-	        $correctAnswer = 'yes';
-            } else if ($randNum % 2 != 0) {
+                 $correctAnswer = 'yes';
+            } elseif ($randNum % 2 != 0) {
                 $correctAnswer = 'no';
             }
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-	    line("Let's try again, {$name}!");										       
-            return false;											
+                line("Let's try again, {$name}!");
+            return false;
         }
-     }
-     line("Congratulations, {$name}");
+    }
+    line("Congratulations, {$name}");
 }
