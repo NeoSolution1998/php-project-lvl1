@@ -12,16 +12,16 @@ function progression()
     line("Hello, %s!", $name);
     line('What number is missing in the progression?');
     for ($j = 0; $j < 3; $j++) {
-    $randNum = rand(1, 10);
-    $randNum2 = rand(0, 9);
-    $randStart = rand(1, 15);
-    $arr = [];
-        for($i = 0; $i < 10; $i++){
+        $randNum = rand(1, 10);
+        $randNum2 = rand(0, 9);
+        $randStart = rand(1, 15);
+        $arr = [];
+        for ($i = 0; $i < 10; $i++) {
             $randNum = $randNum + $randStart;
             $arr[] = $randNum;
         }
         $correctAnswer = $arr[$randNum2];
-        for($i = 0; $i < 10; $i++){
+        for ($i = 0; $i < 10; $i++) {
             $arr[$randNum2] = '..';
         }
 
@@ -34,7 +34,7 @@ function progression()
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
             line("Let's try again, {$name}!");
             return false;
-	}
+        }
     }
     line("Congratulations, {$name}!");
 }
