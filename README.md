@@ -3,3 +3,4 @@
 <a href="https://codeclimate.com/github/NeoSolution1998/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/879f643599075bb62e7f/maintainability" /></a>
 
 <a target="_blank" href="https://asciinema.org/a/YNTqDPmUFIi5e1mpk5T94rRSs">Demo brain-even<a>
+<a target="_blank" href="https://asciinema.org/a/442075">Demo brain-calc<a>
