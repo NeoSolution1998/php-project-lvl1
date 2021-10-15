@@ -4,39 +4,36 @@ namespace Src\Prime;
 
 use function cli\line;
 use function cli\prompt;
+use function Src\Engine\welcome;
+use function Src\Engine\engine;
 
-function prime()
+use const Src\Engine\ROUNDS_COUNT;
+
+function prime(): void
 {
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, {$name}! \n");
+    $name = welcome();
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randNum = rand(1, 100);
-        line("Question: {$randNum}");
-        if (isPrime($randNum)) {
-            $correctAnswer = 'yes';
+        $question = $randNum;
+        $correctAnswer = isPrime($randNum);
+        $engine = engine($question, $correctAnswer);
+        if ($engine) {
+            $result = "Congratulations, {$name}!";
         } else {
-            $correctAnswer = 'no';
-        }
-        $answer = prompt('Your answer');
-        if ($answer === $correctAnswer) {
-            line('Correct!');
-        } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-            line("Let's try again, {$name}!");
-            return false;
+            $result = "Let's try again, {$name}!";
+            break;
         }
     }
-    line("Congratulations, {$name}!");
+    line($result);
 }
 
-function isPrime($number)
+function isPrime(int $randNum): string
 {
-    for ($i = 2; $i < $number; $i++) {
-        if ($number % $i == 0) {
-            return false;
+    for ($j = 2; $j < $randNum; $j++) {
+        if ($randNum % $j === 0) {
+            return 'no';
         }
     }
-    return true;
+    return 'yes';
 }
