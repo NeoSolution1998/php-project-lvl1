@@ -5,7 +5,7 @@ namespace Src\Calc;
 use function cli\line;
 use function cli\prompt;
 
-function calc()
+function calc(): void
 {
     $operations = ['*', '+', '-'];
     line('Welcome to the Brain Game!');

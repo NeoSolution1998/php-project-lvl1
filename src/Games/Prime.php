@@ -5,7 +5,7 @@ namespace Src\Prime;
 use function cli\line;
 use function cli\prompt;
 
-function prime()
+function prime(): void
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
@@ -31,7 +31,7 @@ function prime()
     line("Congratulations, {$name}!");
 }
 
-function isPrime($number)
+function isPrime(int $number): bool
 {
     for ($i = 2; $i < $number; $i++) {
         if ($number % $i == 0) {
