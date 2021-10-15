@@ -9,7 +9,7 @@ use function Src\Engine\engine;
 
 use const Src\Engine\ROUNDS_COUNT;
 
-function game(string $name): void
+function game(): void
 {
     $name = welcome();
     line('Answer "yes" if the number is even, otherwise answer "no".');
