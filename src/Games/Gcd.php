@@ -5,7 +5,7 @@ namespace Src\Gcd;
 use function cli\line;
 use function cli\prompt;
 
-function gcd(): void
+function gcd()
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
@@ -29,7 +29,7 @@ function gcd(): void
     line("Congratulations, {$name}!");
 }
 
-function checkgcd(int $n, int $m): int
+function checkgcd($n, $m)
 {
     if ($m > 0) {
         return checkgcd($m, $n % $m);
