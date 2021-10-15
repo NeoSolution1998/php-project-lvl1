@@ -30,5 +30,5 @@ function game()
             return false;
         }
     }
-    line("Congratulations, {$name}");
+    line("Congratulations, {$name}!");
 }
