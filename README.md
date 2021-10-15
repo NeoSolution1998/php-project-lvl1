@@ -9,3 +9,5 @@
 <a target="_blank" href="https://asciinema.org/a/rA0EbjNdkcU4biDSop6f6EiGa">Demo Brain-Gcd<a>
 <br />
 <a target="_blank" href="https://asciinema.org/a/442192">Demo Brain-Progression<a>
+<br />
+<a target="_blank" href="https://asciinema.org/a/442282">Demo Brain-Prime<a>
