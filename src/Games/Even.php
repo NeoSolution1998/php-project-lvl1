@@ -11,6 +11,7 @@ use const Src\Engine\ROUNDS_COUNT;
 
 function game(): void
 {
+    $result = '';
     $name = welcome();
     line('Answer "yes" if the number is even, otherwise answer "no".');
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
