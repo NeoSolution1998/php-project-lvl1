@@ -11,6 +11,7 @@ use const Src\Engine\ROUNDS_COUNT;
 
 function calc(): void
 {
+    $result = '';
     $operations = ['*', '+', '-'];
     $name = welcome();
     line('What is the result of the expression?');
