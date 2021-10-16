@@ -17,8 +17,8 @@ function calc(): void
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randOperation = rand(0, 2);
         $operation = $operations[$randOperation];
-        $randNum1 = rand(1, 10);
-        $randNum2 = rand(1, 10);
+        $randNum1 = rand(1, 20);
+        $randNum2 = rand(1, 20);
 
         if ($operation === '+') {
             $correctAnswer = $randNum1 + $randNum2;
