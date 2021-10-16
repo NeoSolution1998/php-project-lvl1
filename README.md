@@ -6,15 +6,22 @@
 > ```git clone git@github.com:NeoSolution1998/php-project-lvl1.git```
 > ```make install```
 
-#### Как запустить игру Brain-Even
-> ```make brain-even
-
-<a target="_blank" href="https://asciinema.org/a/YNTqDPmUFIi5e1mpk5T94rRSs"><a>
+#### Запустить игру Brain-Even
+> ```make brain-even```
+<a target="_blank" href="https://asciinema.org/a/YNTqDPmUFIi5e1mpk5T94rRSs">Demo Brain-Even<a>
 <br />
+#### Запустить игру Brain-Calc
+> ```make brain-calc```
 <a target="_blank" href="https://asciinema.org/a/442075">Demo Brain-Calc<a>
 <br />
+#### Запустить игру Brain-Gcd
+> ```make brain-gcd```
 <a target="_blank" href="https://asciinema.org/a/rA0EbjNdkcU4biDSop6f6EiGa">Demo Brain-Gcd<a>
 <br />
+#### Запустить игру Brain-Progression
+> ```make brain-progression```
 <a target="_blank" href="https://asciinema.org/a/442192">Demo Brain-Progression<a>
 <br />
+#### Запустить игру Brain-Prime
+> ```make brain-prime```
 <a target="_blank" href="https://asciinema.org/a/442282">Demo Brain-Prime<a>
