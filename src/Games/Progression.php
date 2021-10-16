@@ -15,7 +15,6 @@ function progression(): void
     line('What number is missing in the progression?');
     $result = '';
     for ($j = 0; $j < ROUNDS_COUNT; $j++) {
-        $result = '';
         $progressionLenght = rand(6, 10);
         $temp = rand(1, 10);
         $progressionElement = rand(1, 15);
