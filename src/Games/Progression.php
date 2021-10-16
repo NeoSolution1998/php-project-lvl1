@@ -4,37 +4,40 @@ namespace Src\Progression;
 
 use function cli\line;
 use function cli\prompt;
+use function Src\Engine\welcome;
+use function Src\Engine\engine;
 
-function progression()
+use const Src\Engine\ROUNDS_COUNT;
+
+function progression(): void
 {
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $name = welcome();
     line('What number is missing in the progression?');
-    for ($j = 0; $j < 3; $j++) {
-        $randNum = rand(1, 10);
-        $randNum2 = rand(0, 9);
-        $randStart = rand(1, 15);
-        $arr = [];
-        for ($i = 0; $i < 10; $i++) {
-            $randNum = $randNum + $randStart;
-            $arr[] = $randNum;
+    for ($j = 0; $j < ROUNDS_COUNT; $j++) {
+        $progressionLenght = rand(6, 10);
+        $temp = rand(1, 10);
+        $progressionElement = rand(1, 15);
+        $progression = [];
+// Создаем прогрессию рандомной длины
+        for ($i = 0; $i < $progressionLenght; $i++) {
+            $temp = $temp + $progressionLenght;
+            $progression[] = $temp;
         }
-        $correctAnswer = $arr[$randNum2];
-        for ($i = 0; $i < 10; $i++) {
-            $arr[$randNum2] = '..';
+// Берем рандомный элемент прогрессии и сохраняем этот элемент в переменной
+        $position = array_rand($progression, 1);
+        $correctAnswer = $progression[$position];
+// Прячем рандомный элемент прогрессии
+        for ($e = 0; $e < $progressionLenght; $e++) {
+            $progression[$position] = '..';
         }
-
-        $progression = implode(" ", $arr);
-        line("Question: {$progression}");
-        $answer = prompt('Your answer');
-        if ($answer == $correctAnswer) {
-            line('Correct!');
+        $question = implode(" ", $progression);
+        $engine = engine($question, $correctAnswer);
+        if ($engine) {
+            $result = "Congratulations, {$name}!";
         } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-            line("Let's try again, {$name}!");
-            return false;
+            $result = "Let's try again, {$name}!";
+            break;
         }
     }
-    line("Congratulations, {$name}!");
+    line($result);
 }
