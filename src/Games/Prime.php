@@ -10,12 +10,12 @@ use function Src\Engine\engine;
 use const Src\Engine\ROUNDS_COUNT;
 
 function prime(): void
-{   
+{
     $result = '';
     $name = welcome();
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $result = '';    
+        $result = '';
         $randNum = rand(2, 100);
         $question = (string) $randNum;
         $correctAnswer = isPrime($randNum);
