@@ -15,7 +15,7 @@ function game(): void
     line('Answer "yes" if the number is even, otherwise answer "no".');
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randNum = rand(0, 100);
-        $question = $randNum;
+        $question = (string) $randNum;
         $correctAnswer = isEven($randNum);
         $engine = engine($question, $correctAnswer);
         if ($engine) {

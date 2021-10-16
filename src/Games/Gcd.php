@@ -4,35 +4,38 @@ namespace Src\Gcd;
 
 use function cli\line;
 use function cli\prompt;
+use function Src\Engine\welcome;
+use function Src\Engine\engine;
 
-function gcd()
+use const Src\Engine\ROUNDS_COUNT;
+
+function gcd(): void
 {
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, {$name}!");
+    $name = welcome();
     line('Find the greatest common divisor of given numbers.');
 
-    for ($i = 0; $i < 3; $i++) {
-        $randNum1 = rand(0, 100);
-        $randNum2 = rand(0, 100);
-        line("Question: {$randNum1} {$randNum2}");
-        $answer = prompt('Your answer');
-        $correctAnswer = checkgcd($randNum1, $randNum2);
-        if ($answer == $correctAnswer) {
-            line('Correct!');
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $randNum1 = rand(2, 100);
+        $randNum2 = rand(2, 100);
+        $question = (string) ("{$randNum1} {$randNum2}");
+        $correctAnswer = isGcd($randNum1, $randNum2);
+        $correctAnswer = (string) $correctAnswer;
+        $engine = engine($question, $correctAnswer);
+
+        if ($engine) {
+            $result = "Congratulations, {$name}!";
         } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-            line("Let's try again, {$name}!");
-            return false;
+            $result = "Let's try again, {$name}!";
+            break;
         }
     }
-    line("Congratulations, {$name}!");
+    line($result);
 }
 
-function checkgcd($n, $m)
+function isGcd(int $n, int $m): int
 {
     if ($m > 0) {
-        return checkgcd($m, $n % $m);
+        return isGcd($m, $n % $m);
     } else {
         return abs($n);
     }
