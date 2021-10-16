@@ -1,10 +1,11 @@
-### Hexlet tests and linter status:
+### ПРОЕКТ Brain Games
 [![hexlet-check](https://github.com/NeoSolution1998/php-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NeoSolution1998/php-project-lvl1/actions/workflows/hexlet-check.yml)
 <a href="https://codeclimate.com/github/NeoSolution1998/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/879f643599075bb62e7f/maintainability" /></a>
 
-### Как установить 
+### Клонировать игру
 > ```git clone git@github.com:NeoSolution1998/php-project-lvl1.git```
-<br />
+
+### После клонирования
 > ```make install```
 
 ### Запустить игру Brain-Even
@@ -32,4 +33,5 @@
 
 ### Запустить игру Brain-Prime
 > ```make brain-prime```
+
 <a target="_blank" href="https://asciinema.org/a/442282">Demo Brain-Prime<a>
