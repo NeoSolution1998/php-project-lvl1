@@ -17,7 +17,7 @@ function gcd(): void
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randNum1 = rand(2, 100);
         $randNum2 = rand(2, 100);
-        $question = (string) ("{$randNum1} {$randNum2}");
+        $question = ("{$randNum1} {$randNum2}");
         $correctAnswer = isGcd($randNum1, $randNum2);
         $correctAnswer = (string) $correctAnswer;
         $engine = engine($question, $correctAnswer);

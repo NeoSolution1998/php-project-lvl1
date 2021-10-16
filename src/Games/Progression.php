@@ -25,7 +25,7 @@ function progression(): void
         }
 // Берем рандомный элемент прогрессии и сохраняем этот элемент в переменной
         $position = array_rand($progression, 1);
-        $correctAnswer = $progression[$position];
+        $correctAnswer = (string) $progression[$position];
 // Прячем рандомный элемент прогрессии
         for ($e = 0; $e < $progressionLenght; $e++) {
             $progression[$position] = '..';
